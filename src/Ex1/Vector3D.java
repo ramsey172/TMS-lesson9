@@ -36,11 +36,8 @@ public class Vector3D {
         return length;
     }
 
-    public Vector3D scalarMultiply(Vector3D vector) {
-        a *= vector.getA();
-        b *= vector.getB();
-        c *= vector.getC();
-        return this;
+    public double scalarMultiply(Vector3D vector) {
+        return a * vector.getA() + b* vector.getB() + c* vector.getC();
     }
 
     public Vector3D add(Vector3D vector) {

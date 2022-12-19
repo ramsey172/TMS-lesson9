@@ -27,11 +27,12 @@ public class VectorMulti {
         return length;
     }
 
-    public VectorMulti scalarMultiply(VectorMulti vector) {
+    public double scalarMultiply(VectorMulti vector) {
+        double res = 0;
         for (int n = 0; n < coords.length; n++) {
-            coords[n] *= vector.getCoords()[n];
+            res += coords[n] * vector.getCoords()[n];
         }
-        return this;
+        return res;
     }
 
     public VectorMulti add(VectorMulti vector) {

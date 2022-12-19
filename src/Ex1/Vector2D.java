@@ -30,10 +30,8 @@ public class Vector2D {
         return length;
     }
 
-    public Vector2D scalarMultiply(Vector2D vector) {
-        a *= vector.getA();
-        b *= vector.getB();
-        return this;
+    public double scalarMultiply(Vector2D vector) {
+        return a * vector.getA() + b * vector.getB();
     }
 
     public Vector2D add(Vector2D vector) {
